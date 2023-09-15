@@ -1,5 +1,4 @@
 from codigo.app_chilquinta import Scraper_Chilquinta
-#import smtplib
 from openpyxl import load_workbook
 
 def send_notification():
@@ -32,10 +31,22 @@ if __name__ == '__main__':
     scraper = Scraper_Chilquinta(url, email, password, driver_path)
 
     #Primer ingreso, año actual
-    print('hacemos login')
-    scraper.login()
-    print('hacemos scrapping')
-    scraper.scrapping_chilquita()
-    #scraper.upload()
-    print('cerramos')
+    print('ingresamos en la clase Scraper_Chilquinta...')
+    print('----------------------------------------------------------------------')
+    
+    # scraper.login()
+    # print('hacemos login en el portal...')
+    # print('----------------------------------------------------------------------')
+    
+    # scraper.scrapping_chilquita()
+    # print('hacemos scrapping al portal...')
+    # print('----------------------------------------------------------------------')
+    
+    scraper.archivos()
+    print('procesamos archivos datos hacia Planilla Formato...')
+    print('----------------------------------------------------------------------')
+    
     scraper.close()
+    print('cerramos el bot...')
+    print('----------------------------------------------------------------------')
+
